@@ -8,13 +8,27 @@
 	<body>
 		<h1>Hello ToDo List</h1>
 		<div>
-			<button onClick="handlers.displayTodos()">Display ToDos</button>
-			<button onClick="handlers.toggleAll()">Toggle All</button>
+			<button onclick="handlers.displayTodos()">Display ToDos</button>
+			<button onclick="handlers.toggleAll()">Toggle All</button>
 		</div>
 		<div>
-			<button onClick="handlers.addTodo()">Add</button>
+			<button onclick="handlers.addTodo()">Add</button>
 			<input id="addTodoTextInput" type="text">
 		</div>
+		<div>
+			<button onclick="handlers.changeTodo()">Change Todo</button>
+			<input type="number" id="changeTodoPositionInput">
+			<input id="changeTodoTextInput" type="text">
+		</div>
+		<div>
+			<button onclick="handlers.deleteTodo()">Delete</button>
+			<input id="deleteTodoPositionInput" type="number">
+		</div>
+		<div>
+			<button onclick="handlers.toggleCompleted()">Toggle Completed</button>
+			<input id="toggleCompletedPositionInput" type="number">
+		</div>
+		<ul></ul>
 		<script src="script.js"></script>
 	</body>
 </html>
