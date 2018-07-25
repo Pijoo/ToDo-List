@@ -70,6 +70,7 @@ var handlers = {
 			todoList.addTodo(addTodoTextInput.value);
 			//to clear out input field
 			addTodoTextInput.value = '';
+			view.displayTodos();
 		}
 	},
 	changeTodo: function() {
@@ -78,19 +79,23 @@ var handlers = {
 		todoList.changeTodos(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value);
 		changeTodoPositionInput.value = '';
 		changeTodoTextInput.value = '';
+        view.displayTodos();
 	},
 	deleteTodo: function() {
 		var deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput');
 		todoList.deleteTodos(deleteTodoPositionInput.valueAsNumber);
 		deleteTodoPositionInput.value = '';
+        view.displayTodos();
 	},
 	toggleCompleted: function() {
 		var toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput');
 		todoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
 		toggleCompletedPositionInput.value = '';
+        view.displayTodos();
 	},
 	toggleAll: function() {
 		todoList.toggleAll();
+        view.displayTodos();
 	}
 };
 
